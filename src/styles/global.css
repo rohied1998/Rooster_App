@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background: #8fe507;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav div {
+    display: flex;
+}
+
+nav div button {
+    margin-right: 20px;
+}
+
+.button {
+    outline: none;
+    padding: 10px;
+    width: fit-content;
+    height: fit-content;
+    background: none;
+    border: none;
+    color: black;
+    transition: .1s transform ease-in-out;
+    border-bottom: 1px solid transparent;
+}
+
+.button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    border-bottom: 1px solid white;
+}
+
+.page {
+    display: none;
+}
+
+.todo-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.todo-create {
+    display: flex; 
+    justify-content: space-between; 
+    padding: 10px; 
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.29);
+    margin-bottom: 20px;
+}
+
+.floating-button {
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.29);
+    background: #8fe507;
+    color: black;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 48px;
+    vertical-align: middle;
+    line-height: 48px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    transition: .1s transform ease-in-out;
+    user-select: none;
+}
+
+.floating-button:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+.floating-button:active {
+    cursor: pointer;
+    transform: scale(0.98);
+}
+
+.todo-done {
+    text-decoration: line-through;
+    opacity: .5;
+}

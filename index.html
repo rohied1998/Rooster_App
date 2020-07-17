@@ -1,0 +1,88 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GLR Rooster</title>
+  <link rel="stylesheet" href="./src/styles/global.css">
+  <link rel="stylesheet" href="./src/external/timetablejs.css">
+</head>
+
+<body>
+  <nav>
+    <!-- LEFT -->
+    <div>
+      <h1>GLR Rooster</h1>
+    </div>
+
+    <!-- RIGHT -->
+    <div>
+      <button class="button" data-pagename="rooster">Rooster</button>
+      <button class="button" data-pagename="todo">Todo list</button>
+    </div>
+
+
+  </nav>
+
+  <!-- Houd de paginas -->
+  <div id="root">
+
+    <!-- Rooster -->
+    <div class="page" data-pagename="rooster">
+      <!-- Nieuwe item -->
+      <div class="todo-create">
+        <div style="display: flex; flex-direction: column;">
+          <input id="rooster-input" placeholder="Wat gebeurt er?" />
+
+          <span>Begin datum en tijd</span>
+          <input id="rooster-tijd-start-input" type="datetime-local" />
+
+          <span>Eind datum en tijd</span>
+          <input id="rooster-tijd-eind-input" type="datetime-local" />
+        </div>
+        <button id="rooster-create-btn">Maak</button>
+      </div>
+
+      <!-- Week selector -->
+      <div class="todo-create">
+        <button id="rooster-prev">Vorige</button>
+        <span id="rooster-week"></span>
+        <button id="rooster-next">Volgende</button>
+      </div>
+
+      <!-- Timetable -->
+      <div class="timetable" style="width: 887px;"></div>
+    </div>
+
+    <!-- Todo -->
+    <div class="page" data-pagename="todo">
+
+      <!-- Nieuwe item -->
+      <div class="todo-create">
+        <input id="todo-input" placeholder="Todo item" />
+        <button id="todo-create-btn">Maak</button>
+      </div>
+
+      <!-- Floating button -->
+      <!-- <div class="floating-button" id="todo-create-btn">
+        +
+      </div> -->
+
+      <!-- Todolist -->
+      <div class="todo-list">
+        <!-- Items -->
+      </div>
+
+
+    </div>
+
+  </div>
+
+  <script src="./src/services/StorageService.js"></script>
+  <script src="./src/services/NavigationHandler.js"></script>
+  <script src="./src/services/TodoService.js"></script>
+  <script src="./src/external/timetable.js"></script>
+  <script src="./src/services/TimeTableService.js"></script>
+</body>
+
+</html>
